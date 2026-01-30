@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=My Product
+Comment=A log-analyzer application
+# The Exec line includes %u to pass the URL to the application
+Exec=/usr/local/bin/log-analyzer %u
+Terminal=false
+Type=Application
+Icon=log-analyzer
+Categories=Utility;
+StartupWMClass=log-analyzer
+
+ 

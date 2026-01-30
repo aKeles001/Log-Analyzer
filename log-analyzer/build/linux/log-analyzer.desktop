@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=log-analyzer
+Exec=log-analyzer
+Icon=log-analyzer
+Categories=Development;
+Terminal=false
+Keywords=wails
+Version=1.0
+StartupNotify=false

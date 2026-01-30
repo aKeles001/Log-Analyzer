@@ -1,0 +1,320 @@
+:root {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: rgba(27, 38, 54, 1);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+    url("./Inter-Medium.ttf") format("truetype");
+}
+
+h3 {
+    font-size: 3em;
+    line-height: 1.1;
+}
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #535bf2;
+}
+
+button {
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px;
+    border: none;
+    margin: 0 0 0 20px;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.result {
+    height: 20px;
+    line-height: 20px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+#app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #e80000aa);
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.result {
+    height: 20px;
+    line-height: 20px;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 1rem;
+    align-content: center;
+    text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+
+    a:hover {
+        color: #747bff;
+    }
+
+    button {
+        background-color: #f9f9f9;
+    }
+}
+
+
+.input-box .btn:hover {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    color: #333333;
+}
+
+.input-box .input {
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    color: black;
+    background-color: rgba(240, 240, 240, 1);
+    -webkit-font-smoothing: antialiased;
+}
+
+.input-box .input:hover {
+    border: none;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.input-box .input:focus {
+    border: none;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.log-container {
+  height: 400px;
+  overflow-y: auto;
+  background: #0d1117;
+  padding: 10px;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.85rem;
+  border-radius: 4px;
+}
+
+.log-line {
+  margin-bottom: 4px;
+  white-space: pre-wrap;
+  border-left: 3px solid transparent;
+  padding-left: 8px;
+}
+
+.timestamp { color: #8b949e; margin-right: 10px; }
+.source { color: #58a6ff; font-weight: bold; margin-right: 10px; }
+.message { color: #c9d1d9; }
+
+/* Level-specific styling */
+.level-critical { border-left-color: #f85149; background: rgba(248, 81, 73, 0.1); }
+.level-high { border-left-color: #d29922; background: rgba(210, 153, 34, 0.1); }
+.level-info { border-left-color: #388bfd; }
+
+/* Log Container - Three Column Grid Layout */
+.log-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Individual Feed Section */
+.feed-section {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+/* Feed Headers */
+.feed-section h3 {
+  margin: 0;
+  padding: 15px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Different colors for each feed header */
+.feed-section:nth-child(1) h3 {
+  background-color: #4a5568;
+}
+
+.feed-section:nth-child(2) h3 {
+  background-color: #2d3748;
+}
+
+.feed-section:nth-child(3) h3 {
+  background-color: #1a202c;
+}
+
+/* Log Feed Content Area */
+.log-feed {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+/* Individual Log Lines */
+.log-line {
+  padding: 8px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  background-color: white;
+  border-left: 3px solid #ccc;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Log Level Colors */
+.log-line.level-info {
+  border-left-color: #3b82f6;
+}
+
+.log-line.level-high {
+  border-left-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+.log-line.level-critical {
+  border-left-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+
+/* Log Line Components */
+.log-line .timestamp {
+  color: #6b7280;
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.log-line .source {
+  color: #059669;
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.log-line .message {
+  color: #1f2937;
+  flex: 1;
+  word-break: break-word;
+}
+
+.log-line .level {
+  color: #6b7280;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  min-width: 60px;
+  text-align: right;
+}
+
+/* Scrollbar Styling */
+.log-feed::-webkit-scrollbar {
+  width: 8px;
+}
+
+.log-feed::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.log-feed::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.log-feed::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive Design - Stack on smaller screens */
+@media (max-width: 1024px) {
+  .log-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .feed-section {
+    height: 400px;
+  }
+}

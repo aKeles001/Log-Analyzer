@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  wails-development:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: wails-development:latest
+    container_name: wails-development
+    user: "0:0"
+    volumes:
+      - .:/app
+      - go-cache:/home/wailsdev/go
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ${HOME}:/home/wailsdev/host-home:ro
+      - /var/log:/var/log/host:ro
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+      - LIBGL_ALWAYS_SOFTWARE=1
+      - GOPATH=/home/wailsdev/go
+      - CGO_ENABLED=1
+      - DISTROBOX_HOST_HOME=${HOME}
+      - USER=wailsdev
+      - HOME=/home/wailsdev
+    working_dir: /app
+    command: tail -f /dev/null
+    stdin_open: true
+    tty: true
+    network_mode: host
+    privileged: true
+    security_opt:
+      - seccomp:unconfined
+      - apparmor:unconfined
+
+volumes:
+  go-cache:
+    driver: local
