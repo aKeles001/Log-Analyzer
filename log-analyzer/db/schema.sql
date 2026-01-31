@@ -1,0 +1,9 @@
+CREATE TABLE if not exists log_entries (
+    id SERIAL PRIMARY KEY,
+    timestamp TIMESTAMP NOT NULL,
+    level VARCHAR(10) NOT NULL,
+    message TEXT NOT NULL,
+    source VARCHAR(255),
+    log_file VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

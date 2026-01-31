@@ -1,0 +1,29 @@
+# Database files - generated at runtime
+log-analyzer/db/database.db
+
+# Dependencies
+node_modules/
+dist/
+build/
+*.lock
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go
+bin/
+*.out
+
+# Exports
+log-analyzer/exports/
