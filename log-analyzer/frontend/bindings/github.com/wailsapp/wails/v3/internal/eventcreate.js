@@ -6,9 +6,17 @@
 // @ts-ignore: Unused imports
 import { Create as $Create } from "@wailsio/runtime";
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore: Unused imports
+import * as models$0 from "../../../../../log-analyzer/internal/models/models.js";
+
 function configure() {
     Object.freeze(Object.assign($Create.Events, {
+        "criticalLog": $$createType0,
     }));
 }
+
+// Private type creation functions
+const $$createType0 = models$0.Log.createFrom;
 
 configure();

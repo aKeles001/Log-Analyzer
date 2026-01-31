@@ -66,7 +66,7 @@ USER root
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-# RUN chmod 666 /var/log/host
+RUN chmod 666 /var/log/host
 RUN usermod -aG sudo wailsdev
 # RUN xhost +local:docker
 USER wailsdev
