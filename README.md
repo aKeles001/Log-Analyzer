@@ -104,7 +104,7 @@ Rule examples:
 - SQLite3
 
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Logs Not Appearing
 Logs are mounted into docer container from '/var/log' mounting process might fail.
