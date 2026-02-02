@@ -2,7 +2,7 @@
 
 Log-Analyzer is a desktop application for monitoring system logs in real-time. Built with **Wails v3** (Go backend) and **React** (TypeScript/TSX frontend).
 
-## 🎯 Features
+## Features
 
 - **Real-Time Log Monitoring**: Live tracking of multiple log sources with automatic updates
 - **Supported Log Sources**:
