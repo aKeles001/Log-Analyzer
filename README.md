@@ -22,7 +22,7 @@ Log-Analyzer is a desktop application for monitoring system logs in real-time. B
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/Log-Analyzer.git
+   git clone https://github.com/aKeles001/Log-Analyzer.git
    cd Log-Analyzer/log-analyzer
    ```
 
